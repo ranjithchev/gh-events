@@ -3,6 +3,16 @@ on:
   pull_request:
     types:
       - opened
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**' # feat/new feat/new/button
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**' # feat/new feat/new/button
 jobs:
   deploy:
     runs-on: ubuntu-latest
